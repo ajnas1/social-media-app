@@ -1,16 +1,24 @@
 # social_media_app
 
-A new Flutter project.
+📱 Social Media App
+ A feature-rich social media application built with Flutter using:
+  - Firebase Realtime Database for real-time data synchronization.
+  - BLoC for state management.
+  - MVC architecture for clean and maintainable code.
+  - Firebase Authentication for secure user login and registration.
+  - Firebase Messaging for real-time notifications.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🌟 Features
+  - User Authentication
+  - Sign up, log in, and log out functionality with Firebase Auth.
+  - Post & Story Sharing
+  - Upload images and videos to create posts and stories.
+  - Real-time Data Updates
+  - Posts and stories update instantly using Firebase Realtime Database.
+  - In-app Notifications
+  - Receive real-time notifications when someone follows you, powered by Firebase Messaging.
+🛠️ Tech Stack
+  - Flutter for the cross-platform user interface.
+  - Firebase (Realtime Database, Auth, Messaging) for backend services.
+  - BLoC for predictable state management.
+  - MVC Architecture for a modular and scalable app design.
