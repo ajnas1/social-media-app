@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media_app/controller/bloc/bloc/navigation_bloc.dart';
+import 'package:social_media_app/utilities/colors.dart';
 import 'package:social_media_app/utilities/constants.dart';
 import 'package:social_media_app/view/account.dart';
 import 'package:social_media_app/view/home.dart';
@@ -48,6 +49,7 @@ class _NavigationState extends State<Navigation> {
           case NavigationStatus.loaded:
             return Scaffold(
               bottomNavigationBar: NavigationBar(
+                indicatorColor: Colors.transparent,
                 height: MediaQuery.of(context).size.height * 0.1,
                 labelBehavior: labelBehavior,
                 selectedIndex: state.currentPageIndex!,
@@ -56,13 +58,13 @@ class _NavigationState extends State<Navigation> {
                 },
                 destinations: <Widget>[
                   const NavigationDestination(
-                    selectedIcon: Icon(IconsaxPlusBold.home),
-                    icon: Icon(IconsaxPlusLinear.home),
+                    selectedIcon: Icon(IconsaxPlusBold.home,color: navigationBarSelectedColor),
+                    icon: Icon(IconsaxPlusLinear.home,color: navigationBarUnSelectedColor),
                     label: 'Home',
                   ),
                   const NavigationDestination(
-                    selectedIcon: Icon(IconsaxPlusBold.video),
-                    icon: Icon(IconsaxPlusLinear.video),
+                    selectedIcon: Icon(IconsaxPlusBold.video,color: navigationBarSelectedColor),
+                    icon: Icon(IconsaxPlusLinear.video,color: navigationBarUnSelectedColor),
                     label: 'Videos',
                   ),
                   NavigationDestination(
@@ -91,13 +93,13 @@ class _NavigationState extends State<Navigation> {
                     label: '',
                   ),
                   const NavigationDestination(
-                    selectedIcon: Icon(IconsaxPlusBold.search_status),
-                    icon: Icon(IconsaxPlusLinear.search_normal),
+                    selectedIcon: Icon(IconsaxPlusBold.search_status,color: navigationBarSelectedColor),
+                    icon: Icon(IconsaxPlusLinear.search_normal,color: navigationBarUnSelectedColor),
                     label: 'Search',
                   ),
                   const NavigationDestination(
-                    selectedIcon: Icon(IconsaxPlusBold.user),
-                    icon: Icon(IconsaxPlusLinear.profile),
+                    selectedIcon: Icon(IconsaxPlusBold.user,color: navigationBarSelectedColor),
+                    icon: Icon(IconsaxPlusLinear.profile,color: navigationBarUnSelectedColor),
                     label: 'Account',
                   ),
                 ],

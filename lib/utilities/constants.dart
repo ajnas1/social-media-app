@@ -4,3 +4,4 @@ enum NavigationStatus  {
   loaded,
   error
 }
+
