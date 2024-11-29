@@ -1,6 +1,11 @@
 part of 'navigation_bloc.dart';
 
-@immutable
-sealed class NavigationState {}
+final class NavigationState {
+  NavigationState({ this.status, this.currentPageIndex});
+  NavigationStatus? status;
+  final int? currentPageIndex;
+}
 
-final class NavigationInitial extends NavigationState {}
+sealed class NavigationActionState extends NavigationState {}
+
+final class NavigationShowActionSheetActionState extends NavigationActionState {}
