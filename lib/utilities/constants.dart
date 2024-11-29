@@ -1,4 +1,4 @@
-enum SocialMediaAppState  {
+enum NavigationStatus  {
   initial,
   loading,
   loaded,
