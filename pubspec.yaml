@@ -38,6 +38,7 @@ dependencies:
   iconsax_plus: ^1.0.0
   flutter_bloc: ^8.1.6
   bloc: ^8.1.4
+  video_player: ^2.9.2
 
 dev_dependencies:
   flutter_test:
