@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
+import 'package:social_media_app/utilities/colors.dart';
+import 'package:social_media_app/widget/video_screen_icons.dart';
 import 'package:video_player/video_player.dart';
 
 
@@ -142,42 +145,64 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Butterfly Video'),
-      ),
-      // Use a FutureBuilder to display a loading spinner while waiting for the
-      // VideoPlayerController to finish initializing.
-      body: GestureDetector(
-        onTap: () {
-          if (buttonselected == true) {
-            _controller.pause();
-            buttonselected = false;
+    return GestureDetector(
+      onTap: () {
+        if (buttonselected == true) {
+          _controller.pause();
+          buttonselected = false;
+        } else {
+          _controller.play();
+          buttonselected = true;
+        }
+      },
+      child: FutureBuilder(
+        future: _initializeVideoPlayerFuture,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            // If the VideoPlayerController has finished initialization, use
+            // the data it provides to limit the aspect ratio of the video.
+            return AspectRatio(
+              aspectRatio: 0.513,
+              // Use the VideoPlayer widget to display the video.
+              child: Stack(children: [
+                VideoPlayer(_controller),
+                Positioned(
+                  top: MediaQuery.of(context).size.height * 0.05,
+                  left: MediaQuery.of(context).size.width * 0.01,
+                  child: IconButton(
+                      highlightColor: Colors.transparent,
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.arrow_back,
+                        color: videoScreenIconColor,
+                      )),
+                ),
+                Positioned(
+                    top: MediaQuery.of(context).size.height * 0.06,
+                    right: MediaQuery.of(context).size.width * 0.43,
+                    child: const Text(
+                      'Video',
+                      style: TextStyle(fontSize: 20, color: videoScreenTextColor),
+                    )),
+                    // Positioned(
+                    //   top: MediaQuery.of(context).size.height * 0.3,
+                    //   right: MediaQuery.of(context).size.width * 0.01,
+                    //   child: IconButton(
+                    //     onPressed: (){}, 
+                    //     icon: const Icon(IconsaxPlusBold.heart,color: videoScreenIconColor,)
+                    //   ),
+                  //  ),
+                  videoScreenIcons(context: context,top: MediaQuery.of(context).size.height * 0.3,right: MediaQuery.of(context).size.width * 0.01),
+              ]),
+            );
           } else {
-            _controller.play();
-            buttonselected = true;
+            // If the VideoPlayerController is still initializing, show a
+            // loading spinner.
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
           }
         },
-        child: FutureBuilder(
-          future: _initializeVideoPlayerFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.done) {
-              // If the VideoPlayerController has finished initialization, use
-              // the data it provides to limit the aspect ratio of the video.
-              return AspectRatio(
-                aspectRatio: 0.59,
-                // Use the VideoPlayer widget to display the video.
-                child: VideoPlayer(_controller),
-              );
-            } else {
-              // If the VideoPlayerController is still initializing, show a
-              // loading spinner.
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            }
-          },
-        ),
       ),
     );
   }
