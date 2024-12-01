@@ -5,12 +5,12 @@ import 'package:social_media_app/utilities/constants.dart';
 Widget authenticationFinishButton(
     {required BuildContext context,
     required String title,
-    required Widget navigationRoute}) {
+    required Function callBack}) {
   return ElevatedButton(
     onPressed: () {
-      // print(usernameController.text);
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => navigationRoute));
+      print('fj');
+      callBack(context);
+      print('fj');
     },
     style: ElevatedButton.styleFrom(
         shape: ContinuousRectangleBorder(
