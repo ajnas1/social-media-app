@@ -192,7 +192,15 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                     //     icon: const Icon(IconsaxPlusBold.heart,color: videoScreenIconColor,)
                     //   ),
                   //  ),
-                  videoScreenIcons(context: context,top: MediaQuery.of(context).size.height * 0.3,right: MediaQuery.of(context).size.width * 0.01),
+                  videoScreenIcons(context: context, icon: IconsaxPlusBold.heart, top: MediaQuery.of(context).size.height * 0.35,right: MediaQuery.of(context).size.width * 0.01),
+                  videoScreenIcons(context: context, data:'hi',top: MediaQuery.of(context).size.height * 0.38,right: MediaQuery.of(context).size.width * 0.01),
+                  videoScreenIcons(context: context, icon: Icons.comment_rounded, top: MediaQuery.of(context).size.height * 0.43,right: MediaQuery.of(context).size.width * 0.01),
+                  Text('hi'),
+                  videoScreenIcons(context: context, icon: Icons.send_rounded, top: MediaQuery.of(context).size.height * 0.51,right: MediaQuery.of(context).size.width * 0.01),
+                  Text('hi'),
+                  videoScreenIcons(context: context, icon: Icons.bookmark_rounded, top: MediaQuery.of(context).size.height * 0.61,right: MediaQuery.of(context).size.width * 0.01),
+                  Text('hi'),
+
               ]),
             );
           } else {

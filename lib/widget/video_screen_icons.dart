@@ -5,7 +5,9 @@ import '../utilities/colors.dart';
 
 Widget videoScreenIcons(
     {required BuildContext context,
-    double? top,
+    IconData? icon,
+    String? data,
+    double? top, 
     double? bottom,
     double? left,
     double? right}) {
@@ -13,11 +15,11 @@ Widget videoScreenIcons(
     top: top,
     bottom: bottom,
     right: right,
-    left:  left,
+    left: left,
     child: IconButton(
         onPressed: () {},
-        icon: const Icon(
-          IconsaxPlusBold.heart,
+        icon:  Icon(
+          icon,
           color: videoScreenIconColor,
         )),
   );
