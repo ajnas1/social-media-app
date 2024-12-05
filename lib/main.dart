@@ -1,9 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:social_media_app/controller/auth_controller.dart';
+import 'package:social_media_app/firebase_options.dart';
 import 'package:social_media_app/utilities/constants.dart';
-import 'package:social_media_app/view/sign_up_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     MultiBlocProvider(
       providers: provider,
@@ -19,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUpScreen(),
+      home: AuthController(),
     );
   }
 }

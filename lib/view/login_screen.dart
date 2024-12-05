@@ -5,8 +5,6 @@ import 'package:lottie/lottie.dart';
 import 'package:social_media_app/controller/bloc/login_bloc/login_bloc.dart';
 import 'package:social_media_app/utilities/colors.dart';
 import 'package:social_media_app/utilities/constants.dart';
-import 'package:social_media_app/view/forgot_password_screen.dart';
-import 'package:social_media_app/view/otp_code_screen.dart';
 import 'package:social_media_app/widget/authentiation_finish_widget.dart';
 import 'package:social_media_app/widget/text_field_widget.dart';
 
@@ -18,15 +16,14 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController phoneNumberController = TextEditingController();
-    TextEditingController passwordController = TextEditingController();
     return BlocListener<LoginBloc, LoginState>(
       listener: (context, state) {
         if(state is LoginScreenRegisterClickedActionState) {
           Navigator.pop(context);
         }else if(state is LoginScreenForgotPasswordClickedActionState) {
-          Navigator.push(context, MaterialPageRoute(builder:(context) => ForgotPasswordScreen()));
+        
         }else if(state is LoginScreenLoginButtonClickedActionState) {
-          Navigator.push(context, MaterialPageRoute(builder:(context) => OtpCodeScreen()));
+        //  Navigator.push(context, MaterialPageRoute(builder:(context) => OtpCodeScreen()));
         }
       },
       child: Scaffold(
@@ -50,24 +47,6 @@ class LoginScreen extends StatelessWidget {
                 phoneNumberController,
                 icon: IconsaxPlusLinear.call,
                 label: 'Enter your Phone number',
-              ),
-              TextFieldWidget(
-                passwordController,
-                icon: IconsaxPlusLinear.lock,
-                label: 'Enter your Password',
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    left: MediaQuery.of(context).size.width * 0.63),
-                child: GestureDetector(
-                  onTap: () {
-                    BlocProvider.of<LoginBloc>(context).add(LoginScreenForgotPasswordClickedEvent());
-                  },
-                  child: const Text(
-                    'Forget Password?',
-                    style: TextStyle(color: authenticationClickableTextColor),
-                  ),
-                ),
               ),
               authenticationFinishButton(
                   context: context, title: 'Login', callBack: callBack),

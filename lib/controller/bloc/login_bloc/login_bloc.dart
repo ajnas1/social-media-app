@@ -11,20 +11,17 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     on<LoginScreenRegisterClickedEvent>(loginScreenRegisterClickedEvent);
     on<LoginScreenForgotPasswordClickedEvent>(loginScreenForgotPasswordClickedEvent);
     on<LoginScreenLoginButtonClickedEvent>(loginScreenLoginButtonClickedEvent);
-    // on<LoginEvent>((event, emit) {
-    //   // TODO: implement event handler
-    // });
   }
 
-  FutureOr<void> loginScreenRegisterClickedEvent(LoginEvent event,Emitter<LoginState> emit) {
+  FutureOr<void> loginScreenRegisterClickedEvent(LoginScreenRegisterClickedEvent event,Emitter<LoginState> emit) {
     emit(LoginScreenRegisterClickedActionState());
   }
 
-  FutureOr<void> loginScreenForgotPasswordClickedEvent(LoginEvent event,Emitter<LoginState> emit) {
+  FutureOr<void> loginScreenForgotPasswordClickedEvent(LoginScreenForgotPasswordClickedEvent event,Emitter<LoginState> emit) {
     emit(LoginScreenForgotPasswordClickedActionState());
   }
   
-  FutureOr<void> loginScreenLoginButtonClickedEvent(LoginEvent event,Emitter<LoginState> emit) {
+  FutureOr<void> loginScreenLoginButtonClickedEvent(LoginScreenLoginButtonClickedEvent event,Emitter<LoginState> emit) {
     emit(LoginScreenLoginButtonClickedActionState());
   }
 }

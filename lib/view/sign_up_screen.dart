@@ -6,7 +6,6 @@ import 'package:social_media_app/utilities/colors.dart';
 import 'package:social_media_app/utilities/constants.dart';
 import 'package:lottie/lottie.dart';
 import 'package:social_media_app/view/login_screen.dart';
-import 'package:social_media_app/view/otp_code_screen.dart';
 import 'package:social_media_app/widget/authentiation_finish_widget.dart';
 import 'package:social_media_app/widget/text_field_widget.dart';
 
@@ -22,27 +21,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   late final TextEditingController phoneNumberController;
 
-  late final TextEditingController passwordController;
-
   @override
   void initState() {
     usernameController = TextEditingController();
     phoneNumberController = TextEditingController();
-    passwordController = TextEditingController();
     BlocProvider.of<SignUpBloc>(context).add(SignUpInitialEvent());
     super.initState();
   }
 
   void callBack(BuildContext context) {
-    print('fj');
-    BlocProvider.of<SignUpBloc>(context).add(SignUpContinueButtonClickedEvent());
+    BlocProvider.of<SignUpBloc>(context).add(SignUpContinueButtonClickedEvent(context: context, username: usernameController.text,phoneNumber: phoneNumberController.text));
   }
 
   @override
   void dispose() {
     usernameController.dispose();
     phoneNumberController.dispose();
-    passwordController.dispose();
     super.dispose();
   }
 
@@ -52,9 +46,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       listenWhen: (previous, current) => current is SignUpActionState,
       buildWhen: (previous, current) => current is! SignUpActionState,
       listener: (context, state) {
-        if(state is SignUpContinueButtonClickedActionState) {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => OtpCodeScreen()));
-        }else if (state is SignUpLoginButtonClickedActionState) {
+        if (state is SignUpLoginButtonClickedActionState) {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
         }
       },
@@ -87,11 +79,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       phoneNumberController,
                       icon: IconsaxPlusLinear.call,
                       label: 'Enter your Phone number',
-                    ),
-                    TextFieldWidget(
-                      passwordController,
-                      icon: IconsaxPlusLinear.lock,
-                      label: 'Enter your Password',
                     ),
                     authenticationFinishButton(
                         context: context,
