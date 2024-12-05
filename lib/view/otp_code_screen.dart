@@ -9,7 +9,9 @@ import 'package:social_media_app/widget/authentiation_finish_widget.dart';
 import 'package:social_media_app/widget/otp_input_widget.dart';
 
 class OtpCodeScreen extends StatelessWidget {
-  OtpCodeScreen({super.key});
+  OtpCodeScreen({super.key,required this.verificationId,required this.username});
+  final String verificationId;
+  final String username;
   // 4 text editing controllers that associate with the 4 input fields
   final TextEditingController _fieldOne = TextEditingController();
   final TextEditingController _fieldTwo = TextEditingController();
@@ -19,7 +21,12 @@ class OtpCodeScreen extends StatelessWidget {
   final TextEditingController _fieldSix = TextEditingController();
 
   void callBack(BuildContext context) {
-    BlocProvider.of<OtpBloc>(context).add(OtpContinueButtonClickedEvent());
+    BlocProvider.of<OtpBloc>(context).add(
+      OtpContinueButtonClickedEvent(
+        verificationId: verificationId,
+        smsCode: _fieldOne.text+_fieldTwo.text+_fieldThree.text+_fieldFour.text+_fieldFive.text+_fieldSix.text,
+        username: username
+      ));
   }
   @override
   Widget build(BuildContext context) {

@@ -1,0 +1,143 @@
+[33mcommit 3200f00c401819e5f34b18a4a6d2a4951008cb98[m[33m ([m[1;35mrefs/stash[m[33m)[m
+Merge: 9bda61f 241fd23
+Author: ajnas <ajnasashkath@gmail.com>
+Date:   Tue Dec 3 09:47:18 2024 +0530
+
+    WIP on firebase_authentication: 9bda61f authentication bloc added
+
+[33mcommit 241fd23e1c79a762fa7dda9028d737da5c252472[m
+Author: ajnas <ajnasashkath@gmail.com>
+Date:   Tue Dec 3 09:47:18 2024 +0530
+
+    index on firebase_authentication: 9bda61f authentication bloc added
+
+[33mcommit 9bda61f6ed10314c680dcb84e8c18517e172d8eb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfirebase_authentication[m[33m, [m[1;31morigin/authentication[m[33m, [m[1;32mmain[m[33m, [m[1;32mauthentication[m[33m)[m
+Author: ajnas <ajnasashkath@gmail.com>
+Date:   Sun Dec 1 16:44:49 2024 +0530
+
+    authentication bloc added
+
+[33mcommit e5e9ca20ec6bf3bb5cb3636c1fb1ae1f0bc3650e[m[33m ([m[1;31morigin/main[m[33m)[m
+Merge: 78870a3 d5281dd
+Author: Ajnas Ashkath <164738424+ajnas1@users.noreply.github.com>
+Date:   Sun Dec 1 07:23:44 2024 +0530
+
+    Merge pull request #5 from ajnas1/authentication
+    
+    authentication ui added
+
+[33mcommit d5281dd1db9ca026b57cea1c8f9ca4b875c1d7d5[m
+Author: ajnas <ajnasashkath@gmail.com>
+Date:   Sun Dec 1 07:12:41 2024 +0530
+
+    authentication ui added
+
+[33mcommit 78870a378d910ee299de144452d71a166c4355e9[m
+Merge: 4f7b811 2247e4e
+Author: ajnas1 <ajnasashkath@gmail.com>
+Date:   Fri Nov 29 19:30:03 2024 +0530
+
+    updated
+
+[33mcommit 4f7b811fca4d75d268fcc14985396480006675ba[m
+Author: ajnas1 <ajnasashkath@gmail.com>
+Date:   Fri Nov 29 19:22:40 2024 +0530
+
+    navigationColors commit
+
+[33mcommit 2247e4ea5a738a402482df84175bc63ec99d805b[m
+Merge: 816791d 1c57d2a
+Author: muhammed ajnas ashkath <164738424+ajnas1@users.noreply.github.com>
+Date:   Fri Nov 29 19:16:32 2024 +0530
+
+    Merge pull request #4 from nasihpm/main
+    
+    video Buttons commit
+
+[33mcommit 1c57d2a793c2bd542ed1e52778a2e59e0d7a1e71[m
+Author: nasih <nasihmuhammed751@gmail.com>
+Date:   Fri Nov 29 17:58:08 2024 +0530
+
+    video Buttons commit
+
+[33mcommit 816791dfc597b01c4f050dd01110883b60eefd92[m
+Merge: dc2eec8 cc5a1ee
+Author: muhammed ajnas ashkath <164738424+ajnas1@users.noreply.github.com>
+Date:   Fri Nov 29 14:27:44 2024 +0530
+
+    Merge pull request #3 from nasihpm/main
+    
+    video commit
+
+[33mcommit cc5a1ee6509ca1cddb72069e9e82122824d8ece0[m
+Merge: fc13caf dc2eec8
+Author: nasihpm <nasihmuhammed751@gmail.com>
+Date:   Fri Nov 29 14:26:24 2024 +0530
+
+    Merge branch 'main' into main
+
+[33mcommit fc13caf50a8b9203e1407189965e2507abc479fb[m
+Author: nasih <nasihmuhammed751@gmail.com>
+Date:   Fri Nov 29 14:11:59 2024 +0530
+
+    video commit
+
+[33mcommit dc2eec8ce08bc7811f86802b2a963d4203da5c3d[m
+Author: ajnas1 <ajnasashkath@gmail.com>
+Date:   Fri Nov 29 14:04:29 2024 +0530
+
+    bloc commit
+
+[33mcommit c3362f2adbd9654105697e3742f27526cba2f837[m
+Merge: d3ea15e 3fec802
+Author: muhammed ajnas ashkath <164738424+ajnas1@users.noreply.github.com>
+Date:   Fri Nov 29 10:48:19 2024 +0530
+
+    Merge pull request #2 from SajadYoosuf/main
+    
+    home commit
+
+[33mcommit 3fec80257e6bf52980333dbf88a1eba7ff6bdb13[m
+Author: sajad yoosuf <sajadyoosuf24@gmail.com>
+Date:   Fri Nov 29 10:42:45 2024 +0530
+
+    stateless commit
+
+[33mcommit 1faa2484e4820397794070037a9eab2cf0e93565[m
+Author: sajad yoosuf <sajadyoosuf24@gmail.com>
+Date:   Fri Nov 29 10:22:53 2024 +0530
+
+    home commit
+
+[33mcommit d3ea15ec26c2569c17eed62df2d826bb6c59e2ee[m
+Author: ajnas1 <ajnasashkath@gmail.com>
+Date:   Thu Nov 28 23:12:08 2024 +0530
+
+    update readme
+
+[33mcommit d8758875900099325dd73eef7443a448688f5d1d[m
+Author: ajnas1 <ajnasashkath@gmail.com>
+Date:   Thu Nov 28 22:38:24 2024 +0530
+
+    navigation commit
+
+[33mcommit 2fb904b61dabb6a3ea5f008b0e6ada2d49be7783[m
+Merge: 6d9e97f cb14859
+Author: muhammed ajnas ashkath <164738424+ajnas1@users.noreply.github.com>
+Date:   Thu Nov 28 16:42:29 2024 +0530
+
+    Merge pull request #1 from SajadYoosuf/main
+    
+    second commit
+
+[33mcommit cb14859aef4fac5f87fb0663567aa221dc3df2bb[m
+Author: sajad yoosuf <sajadyoosuf24@gmail.com>
+Date:   Thu Nov 28 16:34:40 2024 +0530
+
+    second commit
+
+[33mcommit 6d9e97f181b66e8a2f58481d8f24a7ecca09e938[m
+Author: ajnas1 <ajnasashkath@gmail.com>
+Date:   Thu Nov 28 15:51:13 2024 +0530
+
+    initial commit

@@ -10,6 +10,5 @@ final class SignUpInitial extends SignUpState {}
 
 final class SignUpSuccessState extends SignUpState {}
 
-final class SignUpContinueButtonClickedActionState extends SignUpActionState {}
 
 final class SignUpLoginButtonClickedActionState extends SignUpActionState {}
