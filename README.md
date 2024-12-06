@@ -21,4 +21,4 @@
   - Flutter for the cross-platform user interface.
   - Firebase (Realtime Database, Auth, Messaging) for backend services.
   - BLoC for predictable state management.
-  - MVC Architecture for a modular and scalable app design.
+  - MVC Architecture for a modular and scalable app design
