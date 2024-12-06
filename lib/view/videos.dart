@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
+import 'package:lottie/lottie.dart';
 import 'package:social_media_app/utilities/colors.dart';
 import 'package:social_media_app/widget/video_screen_icons.dart';
 import 'package:video_player/video_player.dart';
@@ -198,9 +199,8 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
           } else {
             // If the VideoPlayerController is still initializing, show a
             // loading spinner.
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
+            return Lottie.asset('assets/lottie/loader.json',fit: BoxFit.cover,
+            height: MediaQuery.of(context).size.height);
           }
         },
       ),
